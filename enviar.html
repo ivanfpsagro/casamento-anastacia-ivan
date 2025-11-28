@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Fotos - Anastacia & Ivan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+<form id="uploadForm">
+  <input type="file" id="fileInput" accept="image/*" required />
+  <button type="submit">Enviar Foto</button>
+</form>
+
+<p id="uploadStatus"></p>
+
+<div id="gallery"></div>
+
+
+    <div class="header">
+        <h1>Compartilhe o Dia</h1>
+        <p>Envie suas fotos e vídeos para o álbum de casamento!</p>
+    </div>
+
+    <div class="form-container">
+        <form id="upload-form">
+            <input type="file" id="file-input" accept="image/*,video/*" required>
+            <button type="submit" id="upload-button">Enviar Foto/Vídeo</button>
+            <p id="upload-status" style="margin-top: 15px; color: #9b5de5; font-weight: bold;"></p>
+        </form>
+    </div>
+
+    <div class="galeria-mosaico" id="photo-gallery">
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="app.js"></script> 
+</body>
+</html>

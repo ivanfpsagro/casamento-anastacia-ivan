@@ -1,0 +1,46 @@
+/* Configurações básicas do Layout */
+.galeria-mosaico {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    /* Define o layout de colunas flexíveis */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-auto-rows: 200px; /* Altura padrão para as linhas */
+    gap: 10px; /* Espaço entre as fotos */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.foto-item {
+    overflow: hidden; /* Garante que a imagem não saia da borda */
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    transition: transform 0.3s ease;
+}
+
+.foto-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Classes para criar o efeito de Mosaico (algumas fotos maiores) */
+.item-largo {
+    grid-column: span 2; 
+}
+
+.item-alto {
+    grid-row: span 2;
+}
+
+.item-grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
